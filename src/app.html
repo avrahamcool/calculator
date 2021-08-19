@@ -1,0 +1,105 @@
+<template>
+  <style>
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    label {
+      display: flex;
+      min-width: 500px;
+      justify-content: space-between;
+      padding: 0.5rem;
+    }
+
+    .medium,
+    .large {
+      font-weight: bold;
+    }
+
+    .medium {
+      font-size: 1.5rem;
+    }
+
+    .large {
+      font-size: 2rem;
+    }
+  </style>
+
+  <main>
+    <label>
+      <span>gender:</span>
+      <select value.bind="gender">
+        <option model.bind="0">Choose</option>
+        <option model.bind="1">Male</option>
+        <option model.bind="2">Female</option>
+      </select>
+    </label>
+
+    <label>
+      <span>ציון רמזור:</span>
+      <input type="checkbox" checked.bind="ramzor" />
+    </label>
+
+    <label>
+      <span>weakness:</span>
+      <input type="checkbox" checked.bind="weakness" />
+    </label>
+
+    <label>
+      <span>fever:</span>
+      <input type="checkbox" checked.bind="fever" />
+    </label>
+
+    <label>
+      <span>cough:</span>
+      <input type="checkbox" checked.bind="cough" />
+    </label>
+
+    <label>
+      <span>myalgia:</span>
+      <input type="checkbox" checked.bind="myalgia" />
+    </label>
+
+    <label>
+      <span>tasteandsmellloss:</span>
+      <input type="checkbox" checked.bind="tasteandsmellloss" />
+    </label>
+
+    <label>
+      <span>weakness by ציון רמזור:</span>
+      <input type="checkbox" disabled checked.bind="ramzorByWeakness" />
+    </label>
+
+    <label>
+      <span>tasteandsmellloss by ציון רמזור:</span>
+      <input type="checkbox" disabled checked.bind="ramzorByTasteandsmellloss" />
+    </label>
+
+    <label>
+      <span>myalgia by ציון רמזור:</span>
+      <input type="checkbox" disabled checked.bind="ramzorByMyalgia" />
+    </label>
+
+    <label>
+      <span>cough by ציון רמזור:</span>
+      <input type="checkbox" disabled checked.bind="ramzorByCough" />
+    </label>
+
+    <label>
+      <span>fever by ציון רמזור:</span>
+      <input type="checkbox" disabled checked.bind="ramzorByFever" />
+    </label>
+
+    <label class="medium">
+      <span>Exp(B)</span>
+      <span>${expB}</span>
+    </label>
+
+    <label class="large">
+      <span>Probability</span>
+      <span>${probability}</span>
+    </label>
+  </main>
+</template>
